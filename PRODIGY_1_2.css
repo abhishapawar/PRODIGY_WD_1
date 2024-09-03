@@ -1,0 +1,107 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(51, 51, 51, 0.8); /* Transparent background */
+    color: #fff;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Adds a glass effect */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+/* Hover Effect with Underline */
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffcc00;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Scrolled Navbar Style */
+.navbar.scrolled {
+    background-color: #ff5733; /* Change color when scrolled */
+}
+
+/* Content Sections */
+.section {
+    height: 100vh;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Section Background Images with Overlay Gradients */
+#home {
+    background: linear-gradient(rgba(255, 204, 0, 0.6), rgba(255, 51, 153, 0.6)), url('images/home.jpg') no-repeat center/cover;
+}
+
+#about {
+    background: linear-gradient(rgba(51, 153, 255, 0.6), rgba(255, 102, 178, 0.6)), url('images/about.jpg') no-repeat center/cover;
+}
+
+#services {
+    background: linear-gradient(rgba(102, 204, 255, 0.6), rgba(255, 153, 51, 0.6)), url('images/services.jpg') no-repeat center/cover;
+}
+
+#projects {
+    background: linear-gradient(rgba(102, 255, 102, 0.6), rgba(255, 102, 51, 0.6)), url('images/projects.jpg') no-repeat center/cover;
+}
+
+#contact {
+    background: linear-gradient(rgba(255, 153, 102, 0.6), rgba(102, 51, 204, 0.6)), url('images/contact.jpg') no-repeat center/cover;
+}
